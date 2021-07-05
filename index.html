@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stable Coin System</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/fortmatic/dist/fortmatic.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ethereumjs/browser-builds/dist/ethereumjs-tx/ethereumjs-tx-1.3.3.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="exchange-form">
+            <div id="title">
+                <h2>Swap</h2>
+            </div>
+            <div class="element">
+                <div class="token-symbol" id ="input">BNB</div>
+                <input class="data" id ="inpvalue" type="number" inputmode="decimal" autocomplete="off" autocorrect="off" type="text" pattern="^[0-9]*[.,]?[0-9]*$" placeholder="0.0" minlength="1" maxlength="79" spellcheck="false" value="">
+            </div>
+            
+            <div class="element" >
+                <div class="token-symbol" id = "output">DTS</div>
+                <input class="data"id ="outvalue" inputmode="decimal" autocomplete="off" autocorrect="off" type="text" pattern="^[0-9]*[.,]?[0-9]*$" placeholder="0.0" minlength="1" maxlength="79" spellcheck="false" value="" disabled="disabled">
+            </div>
+            <div id="change-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6E727D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-darkreader-inline-fill="" data-darkreader-inline-stroke="" style="--darkreader-inline-fill:none; --darkreader-inline-stroke:#a2988a;"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+            </div>
+            <div class="swap-btn">
+                <button id = "swap">Swap coin</button>
+                <div class="padding"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="myjs.js"></script>
+
+<script>
+$('#change-btn').click(function(){
+    let inp_token = $('#input').text();
+    let out_token = $('#output').text();
+    $('#input').text(out_token);
+    $('#output').text(inp_token);
+    estimatePrice();
+})
+</script>
+</html>

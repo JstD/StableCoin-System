@@ -1,0 +1,118 @@
+*{
+    font-family: 'Inter var',sans-serif;
+}
+html{
+    background-color: #f9ea8f;
+    background-image: linear-gradient(315deg, #f9ea8f 0%, #aff1da 74%);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+#exchange-form{
+    background-color: rgb(247, 248, 250);
+    width :25%;
+    margin:auto;
+    margin-top: 10%;
+    box-sizing: border-box;
+    /* display: inline-block; */
+    border-radius: 15px;
+    box-shadow: 5px 5px #e4da9b;
+    padding-top: 5px;
+    text-align: center;
+}
+.element{
+    margin:10px;
+    height: 70px;
+    border: 1px solid rgb(195, 198, 214);
+    background-color: rgb(225, 227, 235);
+    border-radius:15px;
+    text-align: left;
+    box-sizing: border-box;
+    margin-bottom: 0;
+}
+.token-symbol{
+    float: left;
+    margin-right: 10px;
+    margin-left:20px;
+    margin-top:20px;
+    width:70px;
+    height:30px;
+    line-height:30px;
+    background-color:rgb(247, 248, 250);
+    text-align:center;
+    border-radius:20px;
+    font-style: bold;
+}
+#change-btn{
+    padding: 4px;
+    border-radius: 12px;
+    height: 24px;
+    width: 24px;
+    position: relative;
+    top: -100px;
+    margin-bottom: -14px;
+    left: calc(50% - 16px);
+    background-color: rgb(247, 248, 250);
+    border: 4px solid rgb(255, 255, 255);
+    z-index: 2;
+    display:block;
+}
+#change-btn:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+.data{
+    height:100%;
+    background-color:inherit;
+    border:none;
+    color: rgb(0, 0, 0);
+    position: relative;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    flex: 1 1 auto;
+    font-size: 24px;
+    white-space: nowrap;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+    padding: 0px;
+    appearance: textfield;
+    text-align: right;
+}
+.data:focus-visible{
+    outline: none;
+    border:none;
+}
+#swap{
+    padding: 16px;
+    width: 100%;
+    text-align: center;
+    border-radius: 20px;
+    outline: none;
+    border: 1px solid transparent;
+    text-decoration: none;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    -webkit-box-align: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    will-change: transform;
+    transition: transform 450ms ease 0s;
+    transform: perspective(1px) translateZ(0px);
+    background-color: rgb(253, 234, 241);
+    color: rgb(213, 0, 102);
+    font-size: 16px;
+    font-weight: 700;
+}
+#swap:hover {
+    background-color: rgb(252, 220, 232);
+}
+.padding{
+    height:5px;
+}
